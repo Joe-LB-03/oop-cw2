@@ -47,6 +47,4 @@ public class BaccaratHand extends CardCollection
         }
         return sum;
       }
-
-    
 }
