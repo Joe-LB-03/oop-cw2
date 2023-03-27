@@ -5,7 +5,7 @@ public class BaccaratCard extends Card
     {
         super(r, s);
     }
-
+    //test
     public int value()
     {
         if (getRank() == Rank.TEN || getRank() == Rank.JACK || getRank() == Rank.QUEEN || getRank() == Rank.KING)
