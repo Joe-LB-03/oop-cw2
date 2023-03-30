@@ -42,10 +42,13 @@ public class Baccarat
             switch(findWinner(playerHand, bankerHand))
             {
                 case 1:
+                    System.out.println("Player win!");
                     playerWins++;
                 case 2:
+                    System.out.println("Tie!");
                     ties++;
                 case 3:
+                    System.out.println("Banker win!");
                     bankerWins++;
             }
 
@@ -151,19 +154,35 @@ public class Baccarat
 
     public static int findWinner(BaccaratHand playerHand, BaccaratHand bankerHand)
     {
+        if(playerHand.isNatural() || bankerHand.isNatural())
+        {
+            if(playerHand.isNatural())
+            {
+                System.out.println("Player has a Natural");
+                if(bankerHand.isNatural())
+                {
+                    System.out.println("Banker has a Natural");
+                    return 2;
+                }
+                return 1;
+            }
+            else if(bankerHand.isNatural())
+            {
+                System.out.println("Banker has a Natural");
+                return 3;
+
+            }
+        }
         if(playerHand.value() > bankerHand.value())
         {
-            System.out.println("Player win!");
             return 1;
         }
         else if(playerHand.value() == bankerHand.value())
         {
-            System.out.println("Tie!");
             return 2;
         }
         else
         {
-            System.out.println("Banker win!");
             return 3;
         }
     }
