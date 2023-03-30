@@ -27,10 +27,7 @@ public class BaccaratHand extends CardCollection
         {
             return true;
         }
-        else
-        {
-            return false;
-        }
+        return false;
     }
 
     @Override

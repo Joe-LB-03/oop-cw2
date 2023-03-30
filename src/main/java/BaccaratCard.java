@@ -8,7 +8,8 @@ public class BaccaratCard extends Card
 
     public int value()
     {
-        if (getRank() == Rank.TEN || getRank() == Rank.JACK || getRank() == Rank.QUEEN || getRank() == Rank.KING)
+        if (getRank() == Rank.TEN || getRank() == Rank.JACK || 
+            getRank() == Rank.QUEEN || getRank() == Rank.KING)
         {
             return 0;
         }

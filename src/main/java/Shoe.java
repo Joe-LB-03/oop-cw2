@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.Collections;
 
 // TODO: Implement the Shoe class in this file
 public class Shoe extends CardCollection

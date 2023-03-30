@@ -28,7 +28,7 @@ public class Baccarat
 
         do
         {
-            if(interactive == true)
+            if(interactive)
             {
                 System.out.println("Round " + rounds);
             }
@@ -49,7 +49,7 @@ public class Baccarat
                     bankerWins++;
             }
 
-            if(interactive == true)
+            if(interactive)
             {
                 System.out.print("Another round? (y/n): ");
                 String response = scanner.nextLine();
@@ -62,11 +62,13 @@ public class Baccarat
                 }
                 else
                 {
-                    System.out.printf("\n\n%d rounds played\n%d player wins\n%d Banker wins\n%d ties",rounds,playerWins,bankerWins,ties);
+                    System.out.printf(
+                        "\n\n%d rounds played\n%d player wins\n%d Banker wins\n%d ties",
+                        rounds,playerWins,bankerWins,ties);
                     cont = false;
                 }
             }
-        } while (interactive == true && cont == true);
+        } while (interactive && cont);
         scanner.close();
     }
 
@@ -97,7 +99,8 @@ public class Baccarat
         }
     }
 
-    public static void resolveBanker(BaccaratHand playerHand, BaccaratHand bankerHand, BaccaratCard recentCard, Shoe shoe)
+    public static void resolveBanker(BaccaratHand playerHand, BaccaratHand bankerHand, 
+        BaccaratCard recentCard, Shoe shoe)
     {
         if(recentCard.value() == 9 || recentCard.value() == 0 || recentCard.value() == 1)
         {
