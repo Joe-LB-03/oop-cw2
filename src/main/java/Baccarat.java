@@ -44,12 +44,15 @@ public class Baccarat
                 case 1:
                     System.out.println("Player win!");
                     playerWins++;
+                    break;
                 case 2:
                     System.out.println("Tie!");
                     ties++;
+                    break;
                 case 3:
                     System.out.println("Banker win!");
                     bankerWins++;
+                    break;
             }
 
             if(interactive)
@@ -170,7 +173,6 @@ public class Baccarat
             {
                 System.out.println("Banker has a Natural");
                 return 3;
-
             }
         }
         if(playerHand.value() > bankerHand.value())
